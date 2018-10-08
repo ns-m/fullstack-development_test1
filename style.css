@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+.container {
+    background-color: #ffffff;
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.circle{
+    width: 200px;
+    height: 200px;
+    display:block;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    line-height:100px;
+    background-color: #3d6cb0;
+    border: 10px solid #fbfff0;
+    box-shadow: 0 0 0 1px #292929;
+}
+h1{
+    width: 275px;
+    /*height: 74px;*/
+    color: #000000;
+    font-family: "Myriad Pro - Light Semi Ext";
+    font-size: 50px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+h2{
+    width: 275px;
+    /*height: 85px;*/
+    color: #000000;
+    font-family: "Myriad Pro";
+    font-size: 123px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+h3{
+    width: 422px;
+    height: 34px;
+    color: #000000;
+    font-family: "Myriad Pro";
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
