@@ -1,0 +1,344 @@
+@font-face {
+  font-family: Myriad Pro;
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro'), url(/fonts/MyriadPro.ttf);
+}
+
+$mainFont: Myriad Pro, sans-serif;
+$generalColor: #3d6cb0;
+$generalSize: 50px;
+$generalWidth: 2480px;
+$generalWidthLeft: 824px;
+$generalWidthRight: 1264px;
+$generalFontSize: 31px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-family: $mainFont;
+}
+
+//.container {
+//  background-color: #ffffff;
+//  width: $generalWidth;
+//  margin: 0 auto;
+//  display: flex;
+//  flex-direction: column;
+//  height: 100%;
+//}
+
+.leftColumn {
+  float: left;
+}
+
+.avatar {
+  margin-top: 90px;
+  margin-left: 160px;
+  width: $generalWidthLeft/2;
+  box-sizing: content-box;
+}
+
+.circle {
+  width: $generalSize * 4;
+  height: $generalSize * 4;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  line-height: 100px;
+  background-color: $generalColor;
+  border: 10px solid #fbfff0;
+  box-shadow: 0 0 0 1px $generalColor;
+  margin-left: 25%;
+}
+
+.avatar div:nth-child(2) {
+  color: #000000;
+  //font-family: $mainFont;
+  font-size: $generalFontSize*2;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.avatar div:nth-child(3) {
+  color: #000000;
+  //font-family: $mainFont;
+  font-size: $generalFontSize*2.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.avatar div:nth-child(4) {
+  color: #000000;
+  //font-family: $mainFont;
+  font-size: $generalFontSize*0.85;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.profile {
+  margin-top: 50px;
+  margin-left: 160px;
+  display: flex;
+  width: $generalWidthLeft/2;
+}
+
+.profile img {
+  width: $generalSize;
+  height: $generalSize;
+}
+
+.profile div {
+  text-transform: uppercase;
+  color: $generalColor;
+  //font-family: $mainFont;
+  font-size: $generalFontSize;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.line {
+  border-top: 5px solid $generalColor;
+  width: 60%;
+  margin-top: 23px;
+}
+
+.profileText {
+  width: $generalWidthLeft/2;
+  margin-left: 160px;
+  color: #000000;
+  font-size: $generalFontSize/2;
+  font-weight: 400;
+}
+
+.contactTable {
+  margin-left: 160px;
+  display: flex;
+  width: $generalWidthLeft/2;
+}
+
+.contactTable td {
+  padding-top: 35px;
+}
+
+.tdLeft {
+  width: $generalWidthLeft/6;
+  color: $generalColor;
+  font-size: $generalFontSize/1.5;
+  font-weight: 700;
+}
+
+.tdRight {
+  color: #000000;
+  font-size: $generalFontSize/1.5;
+  font-weight: 400;
+}
+
+.skills{
+  margin-top: 20px;
+  margin-left: 160px;
+  width: $generalWidthLeft/2;
+  box-sizing: content-box;
+  text-align: center;
+  color: #000000;
+  font-size: $generalFontSize/1.25;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.skills ul{
+  //margin-top: 5px;
+  margin-bottom: 10px;
+}
+.skills li {
+  width: 18px;
+  height: 18px;
+  //text-align: center;
+  border-radius: 50%;
+  background: $generalColor;
+  margin: 0 1%;
+  display: inline-block;
+  position: relative;
+}
+
+.skills li::before{
+  content: '';
+  position: absolute;
+  //top: .9em;
+  //left: -4em;
+  //width: 4em;
+  //height: .2em;
+  background: $generalColor;
+  z-index: -1;
+}
+
+li:first-child::before {
+  //display: none;
+}
+
+.active {
+  //background: $generalColor;
+}
+
+.active ~ li {
+  background-color: #e6e6e6;
+}
+
+.active ~ li::before {
+  //background-color: #e6e6e6;
+}
+
+.rightColumn {
+  float: right;
+  margin-top: 90px;
+  margin-right: 5%;
+  width: $generalWidthRight/2;
+}
+
+.lineR {
+  border-top: 5px solid $generalColor;
+  width: 80%;
+  margin-top: 23px;
+}
+
+.education {
+  display: flex;
+}
+
+.education img {
+  width: $generalSize;
+  height: $generalSize;
+}
+
+.education div {
+  text-transform: uppercase;
+  color: $generalColor;
+  font-size: $generalFontSize;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.educationOne{
+  display: flex;
+  margin-top: 30px;
+  margin-left: 8px;
+}
+
+.educationCircle{
+  width: $generalSize*0.85;
+  height: $generalSize/2.5;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background: #000000;
+}
+
+.educationText{
+  margin-left: 15px;
+  margin-top: -3px;
+}
+
+.colorText{
+  color: $generalColor;
+  font-size: $generalFontSize/1.5;
+  font-weight: 700;
+}
+
+.timeText{
+  color: #020202;
+  font-size: $generalFontSize/1.5;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.univerText{
+  color: #000000;
+  font-size: $generalFontSize/1.5;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.smallText{
+  color: #000000;
+  font-size: $generalFontSize/2.5;
+  font-weight: 400;
+}
+
+.experience{
+  margin-top: 65px;
+}
+
+.experienceOne .colorText{
+  color: #000000;
+}
+
+.software{
+  margin-top: 65px;
+}
+
+.softwareTable{
+  margin-top: 5px;
+  margin-left: 5px;
+  color: #000000;
+  font-size: $generalFontSize/1.5;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.softwareTable td{
+  padding-top: 25px;
+}
+
+.lineSoft, .lineSoft2, .lineSoft3, .lineSoft4, .lineSoft5, .lineSoft6,
+.lineSoft7, .lineSoft8, .lineSoft9, .lineSoft10, .lineSoft11, .lineSoft12{
+  display: inline-block;
+  height: 20px;
+  margin-top: 10px;
+}
+.lineSoft, .lineSoft11{
+  background-color: $generalColor;
+  width: 230px;
+}
+.lineSoft2, .lineSoft12{
+  background-color: #e6e6e6;
+  width: 20px;
+}
+
+.lineSoft7, .lineSoft9{
+  background-color: $generalColor;
+  width: 150px;
+}
+.lineSoft8, .lineSoft10{
+  background-color: #e6e6e6;
+  width: 100px;
+}
+
+.lineSoft3{
+  background-color: $generalColor;
+  width: 200px;
+}
+.lineSoft4{
+  background-color: #e6e6e6;
+  width: 50px;
+}
+
+.lineSoft5{
+  background-color: $generalColor;
+  width: 180px;
+}
+.lineSoft6{
+  background-color: #e6e6e6;
+  width: 70px;
+}
+.tdSoftR{
+  margin-left: 120px;
+}
