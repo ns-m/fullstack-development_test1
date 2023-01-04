@@ -21,11 +21,15 @@ function validate(event) {
     if (! nameField.value || nameField.value.length < 3) {
         errorContainer.innerHTML = '<p style="color:red"><strong>Name error!</strong></p>';
         validForm = false;
+    }else{
+        localStorage.setItem('name', nameField.value);
     }
 
     if (! emailField.value || ! re.test(String(emailField.value).toLowerCase()) ) {
         errorContainer.innerHTML += '<p style="color:red"><strong>Email error!</strong></p>';
         validForm = false;
+    }else{
+        localStorage.setItem('email', emailField.value);
     }
 
     if (! messageField.value || messageField.value.length < 10) {
@@ -43,3 +47,11 @@ function validate(event) {
 const formQuestion = document.getElementById('contactform');
 
 formQuestion.addEventListener('submit', validate);
+
+const nameField = document.getElementById('name');
+const userName = localStorage.getItem('name');
+nameField.value = userName;
+
+const emailField = document.getElementById('email');
+const emailName = localStorage.getItem('email');
+emailField.value = emailName;
