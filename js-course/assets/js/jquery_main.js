@@ -16,16 +16,24 @@ jQuery( function($){
     $('.close').click(function(event){
         $('body').removeClass('is-menu-visible');
     });
+
+    $('#contactform').submit(validate);
+
+    const contactFormData = JSON.parse(localStorage.getItem('contactFormData')),
+        nameField = $('#name'),
+        mailField = $('#email');
+    nameField.val(contactFormData.name);
+    mailField.val(contactFormData.email);
     
 });
 
 function validate(event) {
 
-    const errorContainer = document.getElementById('errorsForm');
-    errorContainer.innerHTML ='';
-    const nameField = document.getElementById('name'),
-    emailField = document.getElementById('email'),
-    messageField = document.getElementById('message'),
+    const errorContainer = jQuery('#errorsForm');
+    errorContainer.html('');
+    const nameField = jQuery('#name'),
+    emailField = jQuery('#email'),
+    messageField = jQuery('#message'),
     re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
     
     const contactFormData = {
@@ -35,24 +43,24 @@ function validate(event) {
 
     let validForm = true;
 
-    if (! nameField.value || nameField.value.length < 3) {
-        errorContainer.innerHTML = '<p style="color:red"><strong>Name error!</strong></p>';
+    if (! nameField.val() || nameField.val().length < 3) {
+        errorContainer.append('<p style="color:red"><strong>Name error!</strong></p>');
         validForm = false;
     }else{
-        contactFormData.name = nameField.value;
+        contactFormData.name = nameField.val();
         //localStorage.setItem('name', nameField.value);
     }
 
-    if (! emailField.value || ! re.test(String(emailField.value).toLowerCase()) ) {
-        errorContainer.innerHTML += '<p style="color:red"><strong>Email error!</strong></p>';
+    if (! emailField.val() || ! re.test(String(emailField.val()).toLowerCase()) ) {
+        errorContainer.append('<p style="color:red"><strong>Email error!</strong></p>');
         validForm = false;
     }else{
-        contactFormData.email = emailField.value;
+        contactFormData.email = emailField.val();
         //localStorage.setItem('email', emailField.value);
     }
 
-    if (! messageField.value || messageField.value.length < 10) {
-        errorContainer.innerHTML += '<p style="color:red"><strong>Message error!</strong></p>';
+    if (! messageField.val() || messageField.val().length < 10) {
+        errorContainer.append('<p style="color:red"><strong>Message error!</strong></p>');
         validForm = false;
     }
 
