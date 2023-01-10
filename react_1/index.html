@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <div id="containerR"></div>
+    
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+        const containerR = document.querySelector('#containerR');
+        // const rCE = React.createElement;
+
+        class LikeButton extends React.Component{
+            
+            constructor(props){
+                super(props);
+                this.state = {isLiked : false}
+            }
+
+            render(){
+
+                if (this.state.isLiked) {
+                    return 'You liked!';
+                }
+
+                return <button
+                    style={{border: '1px solid #000', background: 'yellow'}}
+                    onClick= { () => this.setState( { isLiked : true } ) }>Like</button>
+            }        
+        }
+        
+        ReactDOM.render(<LikeButton/>, containerR);
+    </script>
+    
+   
+</body>
+</html>
+
+<!-- // <script>
+    //     const containerR = document.querySelector('#containerR');
+    //     const rCE = React.createElement;
+
+    //     class LikeButton extends React.Component{
+            
+    //         constructor(props){
+    //             super(props);
+    //             this.state = {isLiked : false}
+    //         }
+
+    //         render(){
+
+    //             if (this.state.isLiked) {
+    //                 return 'You liked!';
+    //             }
+    //             return rCE(
+    //                 'button', 
+    //         {
+    //         style: {
+    //             border: '1px solid #000',
+    //             background: 'yellow'
+    //         },
+    //         onClick : () => this.setState({isLiked : true})
+    //     }, 
+    //         'Like'
+    //             );
+    //         }
+    //     }
+    //     const likeButton = React.createElement('button', 
+    //     {
+    //         style: {
+    //             border: '1px solid #000',
+    //             background: 'yellow'
+    //         }
+    //     }, 
+    //     'Like!'
+    //     );
+    //     ReactDOM.render(likeButton, containerR);
+    //     ReactDOM.render(rCE(LikeButton), containerR);
+    // </script> -->
