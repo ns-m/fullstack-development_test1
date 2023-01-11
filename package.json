@@ -112,7 +112,7 @@
     "wildcard": "^2.0.0"
   },
   "babel": {
-    "presents": [
+    "presets": [
       "@babel/preset-env",
       "@babel/react"
     ]
