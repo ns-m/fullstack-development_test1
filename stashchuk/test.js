@@ -17,10 +17,10 @@ const newArray4 = myArray.map(function(item) {return item * 3})
 console.log('-------------')
 
 console.log(myArray)
-console.log(myArray1)
-console.log(myArray2)
-console.log(myArray3)
-console.log(myArray4)
+console.log(newArray1)
+console.log(newArray2)
+console.log(newArray3)
+console.log(newArray4)
 console.log('-------------')
 
 //destructurization of objects
