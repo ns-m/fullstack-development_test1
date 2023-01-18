@@ -99,3 +99,16 @@ Object.keys(myObjForEach).forEach(key => {
 Object.values(myObjForEach).forEach(value => {
     console.log(value);
 })
+console.log('-------------')
+
+//for of
+const stringForOf = 'Test string';
+for (const symbol of stringForOf) {
+    console.log(symbol);
+}
+console.log('-------------')
+const arrayForOf = [10, 101, null, false, true, undefined, 'qwerty']
+for (const item of arrayForOf) {
+    console.log(item);
+}
+console.log('-------------')
