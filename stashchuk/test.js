@@ -60,4 +60,29 @@ const userInfo = ({nameUserProfile, commentsCount}) => {
     return `User ${nameUserProfile} has ${commentsCount} comments`
 }
 
-userInfo(userProfile)
+console.log(userInfo(userProfile))
+console.log('-------------')
+
+const sumPositiveNumbers = (a, b) => {
+    if (typeof a != 'number' || typeof b != 'number') {
+        return 'One or two arguments is not a number!'
+    }else if (a <= 0 || b <= 0) {
+        return 'Numbers are not positive'
+    }
+    return a + b
+}
+
+console.log(sumPositiveNumbers('abc', true));
+console.log(sumPositiveNumbers(9, -2));
+console.log(sumPositiveNumbers(99, 1));
+console.log('-------------')
+
+//ternary operator
+let valueTO = 10
+console.log(valueTO >= 0 ? valueTO : -valueTO);
+
+valueTO = -3
+const resultTO = valueTO >= 0 ? valueTO : -valueTO;
+console.log(resultTO);
+console.log('-------------')
+
