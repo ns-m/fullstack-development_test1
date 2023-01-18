@@ -86,3 +86,16 @@ const resultTO = valueTO >= 0 ? valueTO : -valueTO;
 console.log(resultTO);
 console.log('-------------')
 
+//foreach
+const myObjForEach = {
+    item1: 60,
+    item2: 'qwerty',
+    item3: null,
+    item4: true
+}
+Object.keys(myObjForEach).forEach(key => {
+    console.log(key, myObjForEach[key]);
+})
+Object.values(myObjForEach).forEach(value => {
+    console.log(value);
+})
