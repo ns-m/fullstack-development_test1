@@ -7,7 +7,7 @@ class Comment {
     upvote(){
         this.votesQty += 1
     }
-
+    //static method
     static mergeComments(first, second){
         return `${first} ${second}`
     }
@@ -20,3 +20,6 @@ while (firstComment.votesQty < 25) {
     firstComment.upvote()
     console.log(firstComment.votesQty)
 }
+//start static method
+Comment.mergeComments(firstComment, secondComment);
+
